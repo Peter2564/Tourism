@@ -1,0 +1,58 @@
+
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:#1a3014 ;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #f78c50 ;
+}
+
+/* Clear floats after the navigation bar */
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Page Content Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    margin: 20px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
