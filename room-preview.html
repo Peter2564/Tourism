@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Preview</title>
+  <link rel="stylesheet" href="room-preview.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Booking Details</h1>
+
+    <!-- Table for booking details -->
+    <table id="bookingTable" class="booking-table">
+      <!-- Table rows will be dynamically populated -->
+    </table>
+
+    <a href="index.html" class="button">Back to Home</a>
+  </div>
+
+  <script>
+    // Retrieve booking details from sessionStorage
+    const bookingDetails = JSON.parse(sessionStorage.getItem('room-preview'));
+
+    if (bookingDetails) {
+      // Populate the booking table dynamically
+      const bookingTable = document.getElementById('bookingTable');
+      bookingTable.innerHTML = `
+        <tr>
+          <th>Name</th>
+          <td>${bookingDetails.name}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>${bookingDetails.email}</td>
+        </tr>
+        <tr>
+          <th>Check-In Date</th>
+          <td>${bookingDetails.checkIn}</td>
+        </tr>
+        <tr>
+          <th>Check-Out Date</th>
+          <td>${bookingDetails.checkOut}</td>
+        </tr>
+        <tr>
+          <th>Room Type</th>
+          <td>${bookingDetails.roomType}</td>
+        </tr>
+        <tr>
+          <th>Number of Guests</th>
+          <td>${bookingDetails.guests}</td>
+        </tr>
+        <tr>
+          <th>Special Requests</th>
+          <td>${bookingDetails.requests || "None"}</td>
+        </tr>
+      `;
+    } else {
+      // Show a message if no booking details are found
+      const container = document.querySelector('.container');
+      container.innerHTML = '<h1>No booking details found.</h1>';
+    }
+  </script>
+</body>
+</html>
