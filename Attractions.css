@@ -1,0 +1,33 @@
+<style>
+        nav ul{
+          list-style-type:none;
+          background colour;black;
+          padding:50px;
+}
+   nav ul li{
+          float:right;
+   }
+   nav ul li a{
+           color:white
+           text-decoration:none;
+           padding:20px;
+  }
+
+  h1{
+    color: brown;
+    padding: auto;
+    font-size: xx-large;
+    font-style: oblique;
+  }
+  nav ul li a:hover{
+                color:whitesmoke;
+               background-color:grey
+
+  }
+  body{
+    background-image: url('https://th.bing.com/th/id/R.ee608a392aea23c4202e1f0dc6106885?rik=IliHBVFlBjrV%2bg&pid=ImgRaw&r=0&sres=1&sresct=1');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  }
+  </style>
