@@ -7,12 +7,13 @@ document.getElementById('loginBtn').addEventListener('click', function () {
         return;
     }
 
-    
+    // Basic validation example
     if (password.length < 6) {
         alert("Password must be at least 6 characters long.");
         return;
     }
 
+    // Redirect to homepage
     alert("Login successful! Redirecting to the homepage...");
     window.location.href = "index.html"; // Replace with your actual homepage URL
 });
